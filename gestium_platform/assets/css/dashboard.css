@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+iframe {
+    margin: 0;
+    padding: 0;
+}
