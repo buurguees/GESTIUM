@@ -18,6 +18,8 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
+const apiRoutes = require('./api');
+
 
 
 // Usar rutas
@@ -40,3 +42,6 @@ app.use(errorHandler);
 app.listen(PORT, () => {
     console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
 });
+
+// Rutas de la API
+app.use('/api', apiRoutes);
