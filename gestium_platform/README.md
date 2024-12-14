@@ -7,6 +7,11 @@ Vamos a usar Firebase cómoplataforma de gestión de Base de Datos y gestión de
 
 
 
+#sidebar::--webkit-scrollbar {
+	display: none;
+}
+
+
 
 
 ESTRUCTURA DIRECTORIO

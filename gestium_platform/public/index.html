@@ -3,23 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestium | Plataforma de Gestión</title>
-  <link rel="stylesheet" href="./assets/css/global.css">
-  <script src="./assets/js/app.js" defer></script>
+  <title>Bienvenido a Gestium</title>
+  <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
-  <header>
-    <h1>Bienvenido a Gestium</h1>
-    <p>Por favor, selecciona una opción:</p>
-  </header>
-  <main>
-    <div class="options">
-      <a href="./pages/login.html" class="btn">Iniciar Sesión</a>
-      <a href="./pages/register.html" class="btn">Registrarse</a>
-    </div>
-  </main>
-  <footer>
-    <p>&copy; 2024 Gestium. Todos los derechos reservados.</p>
-  </footer>
+  <div class="container">
+    <header class="header">
+      <img src="./assets/images/logo.webp" alt="Gestium Logo" class="logo">
+      <h1>Bienvenido a Gestium</h1>
+    </header>
+    <main class="main">
+      <p class="description">Gestium es tu plataforma de gestión de proyectos fácil, ágil y eficiente. ¡Empieza a gestionar tus proyectos ahora!</p>
+      <div class="button-container">
+        <button id="registerButton" class="action-button">Registrarse</button>
+        <button id="loginButton" class="action-button">Iniciar sesión</button>
+        <button id="startButton" class="dashboard-button">Ir al Dashboard</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2024 Gestium. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+  <script>
+    // Redirección al registro
+    document.getElementById("registerButton").addEventListener("click", () => {
+      window.location.href = "./pages/register.html";
+    });
+
+    // Redirección al inicio de sesión
+    document.getElementById("loginButton").addEventListener("click", () => {
+      window.location.href = "./pages/login.html";
+    });
+
+    // Redirección al dashboard
+    document.getElementById("startButton").addEventListener("click", () => {
+      window.location.href = "./pages/dashboard.html";
+    });
+  </script>
 </body>
 </html>
