@@ -5,34 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bienvenido a Gestium</title>
   <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="/gestium_platform/public/assets/css/global.css">
+  <!--BOXICON-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-  <div class="container">
-    <header class="header">
-      <img src="./assets/images/logo.webp" alt="Gestium Logo" class="logo">
-      <h1>Bienvenido a Gestium</h1>
-    </header>
-    <main class="main">
-      <p class="description">Gestium es tu plataforma de gestión de proyectos fácil, ágil y eficiente. ¡Empieza a gestionar tus proyectos ahora!</p>
-      <div class="button-container">
+  <header>
+    <nav>
+      <div class="logo">
+        <i class='bx bxl-graphql'></i>
+        <span>GESTIUM</span>
+      </div>
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+
+      </div>
+      <div class="login-register">
         <button id="registerButton" class="action-button">Registrarse</button>
         <button id="loginButton" class="action-button">Iniciar sesión</button>
-        <button id="startButton" class="dashboard-button">Ir al Dashboard</button>
       </div>
-    </main>
-    <footer class="footer">
-      <p>&copy; 2024 Gestium. Todos los derechos reservados.</p>
-    </footer>
-  </div>
+    </nav>
+    <section  class="h-text">
+      <span>Una plataforma intuitiva que organiza tu equipo, tareas y recursos en un solo lugar, mejorando la productividad y asegurando el éxito de cada proyecto</span>
+      <h1>Optimiza y Gestiona tus Proyectos</h1>
+      <br>
+      <button id="startButton" class="dashboard-button">Ir al Dashboard</button>
+    </section>
+  </header>
+</body>
   <script>
     // Redirección al registro
     document.getElementById("registerButton").addEventListener("click", () => {
-      window.location.href = "./pages/register.html";
+      window.location.href = "./pages/loginregister.html";
     });
 
     // Redirección al inicio de sesión
     document.getElementById("loginButton").addEventListener("click", () => {
-      window.location.href = "./pages/login.html";
+      window.location.href = "./pages/loginregister.html";
     });
 
     // Redirección al dashboard
