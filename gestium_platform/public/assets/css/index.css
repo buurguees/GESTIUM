@@ -53,6 +53,8 @@ nav{
   color: var(--light);
   font-size: 25px;
   font-weight: 600;
+  align-items: center;
+  justify-items: center;
 }
 .menu a{
   text-decoration: none;
