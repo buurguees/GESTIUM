@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/loginregister.css">
-    <script type="module" src="../assets/js/loginregister.js" defer></script>  
+    <script type="module" src="../assets/js/loginregister.js" defer></script> 
+    <link rel="stylesheet" href="/gestium_platform/public/assets/css/global.css"> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>GESTIUM | Login & Registration</title>
 </head>
 <body>
@@ -17,10 +19,10 @@
         </div>
         <div class="nav-menu" id="navMenu">
             <ul>
-                <li><a href="#" class="link active">Home</a></li>
-                <li><a href="#" class="link">About</a></li>
-                <li><a href="#" class="link">Services</a></li>
-                <li><a href="#" class="link">Contact</a></li>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
             </ul>
         </div>
         <div class="nav-button">
@@ -31,12 +33,10 @@
             <i class="bx bx-menu" onclick="myMenuFunction()"></i>
         </div>
     </nav>
-
 <!----------------------------- Form box ----------------------------------->    
     <div class="form-box">
         
         <!------------------- login form -------------------------->
-
         <div class="login-container" id="login">
             <div class="top">
                 <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
@@ -63,7 +63,6 @@
                 </div>
             </div>
         </div>
-
         <!------------------- registration form -------------------------->
         <div class="register-container" id="register">
             <div class="top">
@@ -102,45 +101,40 @@
             </div>
         </div>
     </div>
-</div>  
-
+</div>   
 <script>
-    // NAVMENU
-function myMenuFunction() {
-  var i = document.getElementById("navMenu");
-
-  if(i.className === "nav-menu") {
-      i.className += " responsive";
-  } else {
-      i.className = "nav-menu";
-  }
-}
-
-
-var a = document.getElementById("loginBtn");
-var b = document.getElementById("registerBtn");
-var x = document.getElementById("login");
-var y = document.getElementById("register");
-
-//LOGIN
-function login() {
-  x.style.left = "4px";
-  y.style.right = "-520px";
-  a.className += " white-btn";
-  b.className = "btn";
-  x.style.opacity = 1;
-  y.style.opacity = 0;
-}
-
-//REGISTER
-function register() {
-  x.style.left = "-510px";
-  y.style.right = "5px";
-  a.className = "btn";
-  b.className += " white-btn";
-  x.style.opacity = 0;
-  y.style.opacity = 1;
-}
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
+</script>
+<script>
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
 </script>
 </body>
 </html>
